@@ -1,14 +1,16 @@
-.code{
+/* Code block styling */
+.code {
     color: chocolate;
     font-weight: bold;
 }
 
-.code-title{
+/* Code title styling */
+.code-title {
     color: red;
     font-weight: bold;
 }
 
-/* 开关样式 */
+/* Toggle switch container */
 .switch {
     position: relative;
     display: inline-block;
@@ -16,14 +18,14 @@
     height: 20px;
 }
 
-/* 隐藏原始 checkbox */
+/* Hide default checkbox */
 .switch input {
     opacity: 0;
     width: 0;
     height: 0;
 }
 
-/* 滑块 */
+/* Switch slider */
 .slider {
     position: absolute;
     cursor: pointer;
@@ -36,7 +38,7 @@
     border-radius: 20px;
 }
 
-/* 圆点 */
+/* Switch knob */
 .slider:before {
     position: absolute;
     content: "";
@@ -49,21 +51,23 @@
     border-radius: 50%;
 }
 
-/* 选中状态 */
+/* Active state */
 input:checked + .slider {
-    background-color: #28a745; /* 绿色 */
+    background-color: #28a745; /* Green */
 }
 
-/* 滑块移动 */
+/* Move knob when active */
 input:checked + .slider:before {
     transform: translateX(20px);
 }
 
+/* Success message styling */
 #successMessage {
-    color: #FFD700; /* 金色 */
+    color: #FFD700; /* Gold */
     font-weight: bold;
 }
 
+/* Start button animations */
 #startButton {
     transition: transform 0.2s ease-in-out;
 }
@@ -71,6 +75,7 @@ input:checked + .slider:before {
     transform: scale(1.1);
 }
 
+/* Card base styling */
 .card {
     height: 280px;
     transition: transform 0.3s, box-shadow 0.3s;
@@ -79,13 +84,13 @@ input:checked + .slider:before {
     margin-bottom: 15px;
 }
 
-/* 卡片悬停效果 */
+/* Card hover effects */
 .card:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
-/* 相邻卡片交替背景色 */
+/* Alternating card backgrounds */
 .card-row .col-md-3:nth-child(odd) .card {
     background-color: #f8f9fa;
     border-left: 4px solid #007bff;
@@ -96,7 +101,7 @@ input:checked + .slider:before {
     border-left: 4px solid #6c757d;
 }
 
-/* 卡片标题样式 */
+/* Card title styling */
 .card-title {
     color: #343a40;
     font-weight: 800;
@@ -104,18 +109,18 @@ input:checked + .slider:before {
     border-bottom: 2px solid #e9ecef;
     padding-bottom: 8px;
     margin-bottom: 12px;
-    display: inline-block; /* 或 block */
-    width: 100%;          /* 如果需要占满容器宽度 */
+    display: inline-block;
+    width: 100%;
 }
 
-/* 开关样式美化 */
+/* Switch positioning */
 .switch {
     position: absolute;
     bottom: 15px;
     right: 15px;
 }
 
-/* 代码标签样式 */
+/* Code tag styling */
 .code, .code-title {
     background-color: #f1f3f5;
     padding: 2px 4px;
@@ -124,33 +129,36 @@ input:checked + .slider:before {
     color: #e83e8c;
 }
 
-/* 卡片内容区域 */
+/* Card body layout */
 .card-body {
     position: relative;
     height: 100%;
     padding: 1.25rem;
 }
-.card-body span span:nth-of-type(2){
+
+/* Secondary text in cards */
+.card-body span span:nth-of-type(2) {
     font-size: 0.9rem;
     color: #6c757d;
 }
-/* 卡片文本区域，留出空间给开关 */
+
+/* Card text area with space for toggle */
 .card-text {
     margin-bottom: 30px;
     font-size: 0.9rem;
     color: #495057;
 }
 
-
+/* Progress bar container */
 .progress {
     box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
     height: 25px;
 }
 
+/* Animated progress bar */
 .progress-bar {
     transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1),
                 background-color 0.3s ease;
     font-weight: 600;
     text-shadow: 0 1px 2px rgba(0,0,0,0.2);
 }
-

@@ -1,15 +1,18 @@
+/* Root CSS variables for consistent color theming */
 :root {
     --primary-color: #2c3e50;
     --secondary-color: #3498db;
     --background-color: #ecf0f1;
 }
 
+/* Reset all default browser styling */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Base body styling */
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
@@ -17,22 +20,37 @@ body {
     color: var(--primary-color);
 }
 
+/* Main container with responsive width */
 .container {
     width: 80%;
     margin: 0 auto;
     padding: 20px;
     background: white;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    /* Make container responsive for small screens */
+    max-width: 1200px;
 }
 
+/* Make container take full width on small screens */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 10px;
+    }
+}
+
+/* Profile header section with flex display */
 .profile-header {
     display: flex;
     align-items: center;
     margin-bottom: 30px;
     padding-bottom: 20px;
     border-bottom: 2px solid var(--secondary-color);
+    /* Make profile header stack vertically on small screens */
+    flex-wrap: wrap;
 }
 
+/* Profile image styling with hover effect */
 .profile-image {
     width: 200px;
     height: 200px;
@@ -47,6 +65,20 @@ body {
     transform: scale(1.05);
 }
 
+/* Responsive profile image for small screens */
+@media (max-width: 576px) {
+    .profile-image {
+        width: 150px;
+        height: 150px;
+        margin: 0 auto 20px auto;
+    }
+    .profile-header {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* Contact information section with flex display */
 .contact-info {
     display: flex;
     flex-wrap: wrap;
@@ -54,6 +86,7 @@ body {
     margin-top: 15px;
 }
 
+/* Contact links styling */
 .contact-info a {
     text-decoration: none;
     color: var(--secondary-color);
@@ -62,6 +95,7 @@ body {
     gap: 10px;
 }
 
+/* Skills grid layout with responsive columns */
 .skills-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -69,6 +103,14 @@ body {
     margin-top: 20px;
 }
 
+/* Adjust grid for smaller screens */
+@media (max-width: 576px) {
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Skill card styling with hover effects */
 .skill-card {
     background: #f4f4f4;
     padding: 15px;
@@ -82,28 +124,29 @@ body {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-
+/* References section with top border */
 .references-section {
     margin-top: 40px;
     padding-top: 20px;
     border-top: 2px solid var(--secondary-color);
 }
 
+/* Fade in animation keyframes */
 @keyframes fadeIn {
     from {
         opacity: 0;
     }
-
     to {
         opacity: 1;
     }
 }
 
-
-animated-section {
+/* General animation class */
+.animated-section {
     animation: fadeIn 1s ease-in-out;
 }
 
+/* Introduction section styling with hover effects */
 .introduction {
     background: var(--background-color);
     padding: 30px;
@@ -111,21 +154,18 @@ animated-section {
     box-shadow: 0 4px 10px rgba(0, 255, 255, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border-left: 5px solid var(--primary-color);
+    /* Local variable overrides - creates inconsistency, consider refactoring */
     --primary-color: #5dade2;
-    /* 浅蓝色 */
     --background-color: #eaf2f8;
-    /* 更浅的背景蓝色 */
     --text-color: #2c3e50;
-    /* 深色字体 */
 }
 
-/* 鼠标悬停时微妙放大 */
 .introduction:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0, 255, 229, 0.15);
 }
 
-/* 标题美化 */
+/* Introduction heading style */
 .introduction h2 {
     color: var(--primary-color);
     font-size: 28px;
@@ -135,32 +175,44 @@ animated-section {
     padding-bottom: 5px;
 }
 
-/* 文字样式 */
+/* Introduction paragraph style */
 .introduction p {
     font-size: 18px;
     color: var(--text-color);
     line-height: 1.6;
 }
 
-/* 文字淡入动画 */
+/* Responsive padding for introduction on small screens */
+@media (max-width: 576px) {
+    .introduction {
+        padding: 20px 15px;
+    }
+    .introduction h2 {
+        font-size: 24px;
+    }
+    .introduction p {
+        font-size: 16px;
+    }
+}
+
+/* Fade in up animation keyframes */
 @keyframes fadeInUp {
     from {
         opacity: 0;
         transform: translateY(20px);
     }
-
     to {
         opacity: 1;
         transform: translateY(0);
     }
 }
 
+/* Animation applied to introduction */
 .introduction {
     animation: fadeInUp 1s ease-in-out;
 }
 
-
-/* 技术栈标签样式 */
+/* Technology stack container */
 .tech-stack {
     display: flex;
     flex-wrap: wrap;
@@ -168,6 +220,7 @@ animated-section {
     margin: 1rem 0;
 }
 
+/* Technology tag styling */
 .tech-tag {
     background: rgba(52, 152, 219, 0.1);
     color: var(--secondary-color);
@@ -177,7 +230,7 @@ animated-section {
     border: 1px solid rgba(52, 152, 219, 0.2);
 }
 
-/* 引用部分优化 */
+/* References section styling */
 .references-section {
     background: rgba(236, 240, 241, 0.3);
     padding: 2rem;
@@ -186,14 +239,21 @@ animated-section {
     border-left: 4px solid var(--secondary-color);
 }
 
+/* Responsive padding for references on small screens */
+@media (max-width: 576px) {
+    .references-section {
+        padding: 1.5rem;
+    }
+}
+
+/* Reference list text styling */
 .reference-list {
     font-size: 0.95rem;
     line-height: 1.8;
     color: #5a6a7d;
 }
 
-
-/* 技术技能样式 */
+/* Skills section with gradient background */
 .skills-section {
     background: linear-gradient(135deg,
             rgba(255, 255, 255, 0.95) 0%,
@@ -204,6 +264,14 @@ animated-section {
     border: 1px solid rgba(52, 152, 219, 0.1);
 }
 
+/* Responsive padding for skills section */
+@media (max-width: 576px) {
+    .skills-section {
+        padding: 1.5rem;
+    }
+}
+
+/* Enhanced skill card styling with pseudo-element */
 .skill-card {
     background: white;
     padding: 1.5rem;
@@ -235,13 +303,13 @@ animated-section {
     transform: translateY(-5px);
 }
 
-/* 时间线优化 */
+/* Timeline container */
 .timeline {
     position: relative;
     padding-top: 40px;
 }
 
-
+/* Timeline date label */
 .timeline-date {
     display: inline-block;
     background: rgba(52, 152, 219, 0.1);
@@ -252,7 +320,7 @@ animated-section {
     margin-bottom: 0.8rem;
 }
 
-/* 项目亮点样式 */
+/* Project highlights section */
 .project-highlights {
     background: rgba(52, 152, 219, 0.03);
     padding: 3rem 2rem;
@@ -261,6 +329,14 @@ animated-section {
     border: 1px solid rgba(52, 152, 219, 0.1);
 }
 
+/* Responsive padding for project highlights */
+@media (max-width: 768px) {
+    .project-highlights {
+        padding: 2rem 1rem;
+    }
+}
+
+/* Highlight grid with responsive columns */
 .highlight-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -268,6 +344,15 @@ animated-section {
     margin-top: 1.5rem;
 }
 
+/* Adjust highlight grid for very small screens */
+@media (max-width: 576px) {
+    .highlight-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+/* Highlight card with hover effects */
 .highlight-card {
     background: white;
     padding: 2rem;
@@ -276,6 +361,13 @@ animated-section {
     transition: transform 0.3s ease;
     position: relative;
     overflow: hidden;
+}
+
+/* Responsive padding for highlight cards */
+@media (max-width: 576px) {
+    .highlight-card {
+        padding: 1.5rem;
+    }
 }
 
 .highlight-card:hover {
@@ -298,6 +390,7 @@ animated-section {
     transform: scaleX(1);
 }
 
+/* Highlight icon container */
 .highlight-icon {
     width: 60px;
     height: 60px;
@@ -314,6 +407,7 @@ animated-section {
     color: var(--secondary-color);
 }
 
+/* Highlight list styling */
 .highlight-list {
     list-style: none;
     padding-left: 0;
@@ -334,7 +428,7 @@ animated-section {
     font-weight: 700;
 }
 
-/* 项目经验容器 */
+/* Project experience section */
 .project-experience {
     margin: 3rem 0;
     padding: 2rem;
@@ -343,7 +437,14 @@ animated-section {
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
 }
 
-/* 项目卡片 */
+/* Responsive padding for project experience */
+@media (max-width: 768px) {
+    .project-experience {
+        padding: 1.5rem;
+    }
+}
+
+/* Project card with hover effects */
 .project-card {
     border: 1px solid rgba(52, 152, 219, 0.1);
     border-radius: 10px;
@@ -352,12 +453,19 @@ animated-section {
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* Responsive padding for project card */
+@media (max-width: 576px) {
+    .project-card {
+        padding: 1.5rem;
+    }
+}
+
 .project-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 25px rgba(52, 152, 219, 0.1);
 }
 
-/* 项目标题区 */
+/* Project header with space-between layout */
 .project-header {
     display: flex;
     justify-content: space-between;
@@ -365,6 +473,9 @@ animated-section {
     margin-bottom: 1.5rem;
     padding-bottom: 1rem;
     border-bottom: 2px solid rgba(52, 152, 219, 0.1);
+    /* Stack vertically on small screens */
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
 .project-header h3 {
@@ -373,27 +484,36 @@ animated-section {
     margin: 0;
 }
 
-/* 技术标签容器 */
+/* Project tech tags container */
 .project-tech {
     display: flex;
     gap: 0.8rem;
     flex-wrap: wrap;
 }
 
-/* 项目内容布局 */
+/* Project content grid layout */
 .project-content {
     display: grid;
     grid-template-columns: 1fr 1.5fr;
     gap: 2rem;
 }
 
-/* 项目描述样式 */
+/* Make project content single column on small screens */
+@media (max-width: 768px) {
+    .project-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+/* Project description heading */
 .project-desc h4 {
     color: var(--secondary-color);
     margin-bottom: 1rem;
     font-size: 1.1rem;
 }
 
+/* Feature list styling */
 .feature-list {
     list-style: none;
     padding-left: 1.5rem;
@@ -413,7 +533,7 @@ animated-section {
     font-weight: bold;
 }
 
-/* 技术实现列表 */
+/* Achievement list styling */
 .achievement-list {
     list-style: none;
     padding-left: 0;
@@ -436,7 +556,7 @@ animated-section {
     text-align: center;
 }
 
-/* Education Section Styles */
+/* Education section styling */
 .education-section {
     background: rgba(255, 255, 255, 0.98);
     padding: 2.5rem;
@@ -445,6 +565,14 @@ animated-section {
     margin: 2rem 0;
 }
 
+/* Responsive padding for education section */
+@media (max-width: 768px) {
+    .education-section {
+        padding: 1.5rem;
+    }
+}
+
+/* Timeline item styling with hover effect */
 .timeline-item {
     background: #fff;
     padding: 1.8rem;
@@ -454,14 +582,23 @@ animated-section {
     transition: transform 0.3s ease;
 }
 
+/* Responsive padding for timeline items */
+@media (max-width: 576px) {
+    .timeline-item {
+        padding: 1.2rem;
+    }
+}
+
 .timeline-item:hover {
     transform: translateX(10px);
 }
 
+/* Education details container */
 .education-details {
     margin-top: 1.2rem;
 }
 
+/* Degree text styling */
 .degree {
     color: var(--primary-color);
     font-weight: 600;
@@ -469,12 +606,15 @@ animated-section {
     margin-bottom: 0.8rem;
 }
 
+/* Academic performance flex container */
 .academic-performance {
     display: flex;
     gap: 1.5rem;
     margin: 1rem 0;
+    flex-wrap: wrap;
 }
 
+/* GPA and honors styling */
 .gpa,
 .honors {
     padding: 0.4rem 0.8rem;
@@ -483,12 +623,13 @@ animated-section {
     font-size: 0.9rem;
 }
 
-/* 认证部分样式 */
+/* Certification section */
 .cert-section {
     padding: 2.5rem 0;
     margin: 2rem 0;
 }
 
+/* Certification grid with responsive columns */
 .cert-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -496,6 +637,14 @@ animated-section {
     margin-top: 1.5rem;
 }
 
+/* Adjust certification grid for small screens */
+@media (max-width: 576px) {
+    .cert-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Certification item with hover effects */
 .cert-item {
     background: #fff;
     padding: 2rem;
@@ -505,6 +654,13 @@ animated-section {
     border: 1px solid rgba(52, 152, 219, 0.1);
     position: relative;
     overflow: hidden;
+}
+
+/* Responsive padding for certification items */
+@media (max-width: 576px) {
+    .cert-item {
+        padding: 1.5rem;
+    }
 }
 
 .cert-item:hover {
@@ -549,25 +705,4 @@ animated-section {
     color: #6c757d;
     font-size: 0.9rem;
     margin: 0;
-}
-
-/* 响应式设计 */
-@media (max-width: 768px) {
-    .cert-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .cert-item {
-        padding: 1.5rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .cert-section {
-        padding: 1.5rem 0;
-    }
-
-    .cert-item i {
-        font-size: 2rem;
-    }
 }
