@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rui Xin - Professional Portfolio</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="css/cv.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/navbar.css">
+    <!-- <link href="/html/css/tem.css" rel="stylesheet"> -->
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+        <div class="container-fluid"> <!-- Full-width container for better responsiveness -->
+            <a href="cv.html" class="navbar-brand px-3">Personalised CV</a>
+
+            <!-- Toggler button for mobile view -->
+            <button type="button" class="navbar-toggler border-0" data-bs-toggle="collapse"
+                data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Collapsible navigation menu -->
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav ms-auto"> <!-- Align menu items to the right -->
+                    <li class="nav-item">
+                        <a href="tem.html" class="nav-link text-light">Best Practices</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="profile-header animated-section">
+            <img src="image/logo.jpeg" alt="Rui Xin Profile" class="profile-image">
+            <div>
+                <h1>Holo</h1>
+                <p>Back-end Developer</p>
+                <div class="contact-info">
+                    <a href="mailto:placeholder@email.com"><i class="fas fa-envelope"></i> placeholder@email.com</a>
+                    <a href="tel:+1234567890"><i class="fas fa-phone"></i> +1 (234) 567-890</a>
+                    <a href="https://linkedin.com/in/placeholder" target="_blank"><i class="fab fa-linkedin"></i>
+                        LinkedIn Profile</a>
+                    <a href="https://github.com/placeholder" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                </div>
+            </div>
+        </div>
+
+        <section class="introduction">
+            <h2>Professional Biography</h2>
+            <p>As a dedicated Software Engineering graduate from Shanghai University of Electric Power, I bring a robust
+                blend of technical expertise and innovative problem-solving skills. My academic journey and professional
+                experiences have equipped me with a comprehensive understanding of modern software development
+                practices, particularly in distributed systems, microservices, and high-performance web applications.
+            </p>
+
+            <p>My passion lies in creating efficient, scalable software solutions that address complex business
+                challenges. Through projects like the Online Music Playback System, I've demonstrated my ability to
+                leverage cutting-edge technologies such as Redis, Elasticsearch, and distributed transaction frameworks
+                to develop robust, high-concurrency applications.</p>
+        </section>
+
+        <section class="skills-section animated-section">
+            <h2>Technical Skills</h2>
+            <div class="skills-container">
+                <div class="skill-card">
+                    <h3>Backend Development</h3>
+                    <p>Java, SpringBoot, Microservices</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Database Technologies</h3>
+                    <p>MySQL, Redis, Elasticsearch</p>
+                </div>
+                <div class="skill-card">
+                    <h3>DevOps <br>& Tools</h3>
+                    <p>Maven, Git, Nginx</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Message Brokers</h3>
+                    <p>RabbitMQ, Distributed Systems</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Highlights Section (Before Project Experience) -->
+        <section class="project-highlights animated-section">
+            <h2 class="section-title">Project Highlights</h2>
+            <div class="highlight-grid">
+                <!-- High Concurrency Handling -->
+                <div class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>High Concurrency Architecture</h3>
+                    <ul class="highlight-list">
+                        <li>Redis caching layer improved response speed by 300%</li>
+                        <li>Elasticsearch enabled millisecond-level music search</li>
+                        <li>Nginx load balancing handled 5000+ concurrent requests</li>
+                    </ul>
+                </div>
+
+                <!-- Distributed Systems -->
+                <div class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3>Distributed Solutions</h3>
+                    <ul class="highlight-list">
+                        <li>Redisson distributed locks prevented cache breakdown</li>
+                        <li>Seata enabled cross-service transaction management</li>
+                        <li>RabbitMQ handled asynchronous song update notifications</li>
+                    </ul>
+                </div>
+
+                <!-- System Security -->
+                <div class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Security & Reliability</h3>
+                    <ul class="highlight-list">
+                        <li>JWT tokens implemented for user authentication</li>
+                        <li>Spring Security protected against XSS attacks</li>
+                        <li>Regular cold backups + Redis persistence for data safety</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Experience Section (Below Professional Skills) -->
+        <section class="project-experience animated-section">
+            <h2 class="section-title">Project Experience</h2>
+
+            <!-- Online Music Streaming System -->
+            <div class="project-card">
+                <div class="project-header">
+                    <h3>Online Music Streaming System</h3>
+                    <div class="project-tech">
+                        <span class="tech-tag">Spring Boot</span>
+                        <span class="tech-tag">Redis</span>
+                        <span class="tech-tag">Elasticsearch</span>
+                        <span class="tech-tag">Seata</span>
+                    </div>
+                </div>
+
+                <div class="project-content">
+                    <div class="project-desc">
+                        <h4>Project Overview</h4>
+                        <p>Developed a high-concurrency music streaming service platform, including a backend management
+                            system and a client portal:</p>
+                        <ul class="feature-list">
+                            <li>Backend: Music categorization, song inventory management, data dashboard</li>
+                            <li>Client: Music search, online playback, personalized recommendations</li>
+                            <li>Performance Metrics: Supports 5000+ concurrent users, average response time ≤ 300ms</li>
+                        </ul>
+                    </div>
+
+                    <div class="project-responsibility">
+                        <h4>Technical Implementation</h4>
+                        <ul class="achievement-list">
+                            <li>
+                                <i class="fas fa-database"></i>
+                                <strong>Cache Optimization:</strong> Implemented a two-tier Redis caching strategy,
+                                improving homepage load speed by 300%
+                            </li>
+                            <li>
+                                <i class="fas fa-search"></i>
+                                <strong>Search Module:</strong> Integrated Elasticsearch for millisecond-level music
+                                search
+                            </li>
+                            <li>
+                                <i class="fas fa-lock"></i>
+                                <strong>Security Measures:</strong> Utilized Redisson distributed locks to prevent cache
+                                breakdown, reducing error rates by 99%
+                            </li>
+                            <li>
+                                <i class="fas fa-exchange-alt"></i>
+                                <strong>Transaction Management:</strong> Integrated Seata for cross-microservice
+                                distributed transactions
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- <section class="experience-section animated-section">
+            <h2 class="section-title">Professional Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>Software Engineer <span class="company">Tech Corp</span></h3>
+                    <div class="timeline-date">2020-2022</div>
+                    <ul class="">
+                        <li>Developed core features using Spring Boot</li>
+                        <li>Optimized system performance by 40%</li>
+                    </ul>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Java</span>
+                        <span class="tech-tag">MySQL</span>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+        <!-- Education Section -->
+        <section class="education-section animated-section">
+            <h2 class="section-title">Education</h2>
+            <div class="timeline">
+                <!-- Shanghai University of Electric Power -->
+                <div class="timeline-item">
+                    <div class="timeline-date">2018-09 - 2022-07</div>
+                    <h3>Shanghai University of Electric Power</h3>
+                    <div class="education-details">
+                        <p class="degree">Bachelor of Software Engineering</p>
+                        <div class="academic-performance">
+                            <span class="gpa">GPA: 3.2/4.0</span>
+                            <span class="honors">University Third-Class Scholarship</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item current">
+                    <div class="timeline-date">2024-07 - Present</div>
+                    <h3>University of Western Australia</h3>
+                    <div class="education-details">
+                        <p class="degree">Master of Information Technology</p>
+                        <div class="academic-performance">
+                            <span class="status">Expected Graduation: 2026</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="cert-section animated-section">
+            <h2 class="section-title">Certifications</h2>
+            <div class="cert-grid">
+                <div class="cert-item">
+                    <i class="fab fa-aws"></i>
+                    <h4>AWS Certified Developer</h4>
+                    <p>2023 | Validation #AWS-0239012732</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="references-section">
+            <h2>References</h2>
+            <div class="reference-list">
+                <h3>Sources and Acknowledgments</h3>
+                <ol>
+                    <li>W3Schools. (n.d.). Online Web Tutorials. Retrieved from 
+                        https://www.w3schools.com</li>
+                    <li>Runoob. (n.d.). Programming Tutorials. Retrieved from 
+                        https://www.runoob.com</li>
+                    <li>MDN Web Docs. (n.d.). Web development guides. Retrieved from 
+                        https://developer.mozilla.org</li>
+                    <li>FreeCodeCamp. (2024). Open-source coding curriculum. Retrieved from 
+                        https://www.freecodecamp.org</li>
+                    <li>Stack Overflow. (n.d.). Developer Community. Retrieved from 
+                        https://stackoverflow.com</li>
+                </ol>
+            </div>
+        </section>
+    </div>
+
+
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Person",
+          "name": "Rui Xin",
+          "jobTitle": "Back-end Developer",
+          "url": "https://yourportfolio.com",
+          "sameAs": [
+            "https://linkedin.com/in/xxxxxx",
+            "https://github.com/xxxxxx"
+          ]
+        }
+        </script>
+    <script src="script/cv.js"></script>
+</body>
+
+</html>

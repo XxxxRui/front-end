@@ -1,0 +1,156 @@
+.code{
+    color: chocolate;
+    font-weight: bold;
+}
+
+.code-title{
+    color: red;
+    font-weight: bold;
+}
+
+/* 开关样式 */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+}
+
+/* 隐藏原始 checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* 滑块 */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 20px;
+}
+
+/* 圆点 */
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+/* 选中状态 */
+input:checked + .slider {
+    background-color: #28a745; /* 绿色 */
+}
+
+/* 滑块移动 */
+input:checked + .slider:before {
+    transform: translateX(20px);
+}
+
+#successMessage {
+    color: #FFD700; /* 金色 */
+    font-weight: bold;
+}
+
+#startButton {
+    transition: transform 0.2s ease-in-out;
+}
+#startButton:hover {
+    transform: scale(1.1);
+}
+
+.card {
+    height: 280px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* 卡片悬停效果 */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* 相邻卡片交替背景色 */
+.card-row .col-md-3:nth-child(odd) .card {
+    background-color: #f8f9fa;
+    border-left: 4px solid #007bff;
+}
+
+.card-row .col-md-3:nth-child(even) .card {
+    background-color: #fff;
+    border-left: 4px solid #6c757d;
+}
+
+/* 卡片标题样式 */
+.card-title {
+    color: #343a40;
+    font-weight: 800;
+    font-size: large;
+    border-bottom: 2px solid #e9ecef;
+    padding-bottom: 8px;
+    margin-bottom: 12px;
+    display: inline-block; /* 或 block */
+    width: 100%;          /* 如果需要占满容器宽度 */
+}
+
+/* 开关样式美化 */
+.switch {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+}
+
+/* 代码标签样式 */
+.code, .code-title {
+    background-color: #f1f3f5;
+    padding: 2px 4px;
+    border-radius: 3px;
+    font-family: monospace;
+    color: #e83e8c;
+}
+
+/* 卡片内容区域 */
+.card-body {
+    position: relative;
+    height: 100%;
+    padding: 1.25rem;
+}
+.card-body span span:nth-of-type(2){
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+/* 卡片文本区域，留出空间给开关 */
+.card-text {
+    margin-bottom: 30px;
+    font-size: 0.9rem;
+    color: #495057;
+}
+
+
+.progress {
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+    height: 25px;
+}
+
+.progress-bar {
+    transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+                background-color 0.3s ease;
+    font-weight: 600;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+

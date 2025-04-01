@@ -1,0 +1,573 @@
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --background-color: #ecf0f1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: var(--background-color);
+    color: var(--primary-color);
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+.profile-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 30px;
+    border: 5px solid var(--secondary-color);
+    transition: transform 0.3s ease;
+}
+
+.profile-image:hover {
+    transform: scale(1.05);
+}
+
+.contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.contact-info a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.skill-card {
+    background: #f4f4f4;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+.references-section {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 2px solid var(--secondary-color);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+animated-section {
+    animation: fadeIn 1s ease-in-out;
+}
+
+.introduction {
+    background: var(--background-color);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 255, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-left: 5px solid var(--primary-color);
+    --primary-color: #5dade2;
+    /* 浅蓝色 */
+    --background-color: #eaf2f8;
+    /* 更浅的背景蓝色 */
+    --text-color: #2c3e50;
+    /* 深色字体 */
+}
+
+/* 鼠标悬停时微妙放大 */
+.introduction:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 255, 229, 0.15);
+}
+
+/* 标题美化 */
+.introduction h2 {
+    color: var(--primary-color);
+    font-size: 28px;
+    margin-bottom: 15px;
+    border-bottom: 3px solid var(--primary-color);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* 文字样式 */
+.introduction p {
+    font-size: 18px;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* 文字淡入动画 */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.introduction {
+    animation: fadeInUp 1s ease-in-out;
+}
+
+
+/* 技术栈标签样式 */
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 1rem 0;
+}
+
+.tech-tag {
+    background: rgba(52, 152, 219, 0.1);
+    color: var(--secondary-color);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    border: 1px solid rgba(52, 152, 219, 0.2);
+}
+
+/* 引用部分优化 */
+.references-section {
+    background: rgba(236, 240, 241, 0.3);
+    padding: 2rem;
+    border-radius: 10px;
+    margin-top: 3rem;
+    border-left: 4px solid var(--secondary-color);
+}
+
+.reference-list {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: #5a6a7d;
+}
+
+
+/* 技术技能样式 */
+.skills-section {
+    background: linear-gradient(135deg,
+            rgba(255, 255, 255, 0.95) 0%,
+            rgba(248, 249, 250, 0.95) 100%);
+    padding: 2rem;
+    border-radius: 12px;
+    margin: 2rem 0;
+    border: 1px solid rgba(52, 152, 219, 0.1);
+}
+
+.skill-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(52, 152, 219, 0.1);
+}
+
+.skill-card::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 3px;
+    height: 100%;
+    background: var(--secondary-color);
+    transition: height 0.4s ease;
+}
+
+.skill-card:hover::before {
+    height: 0;
+    top: 100%;
+}
+
+.skill-card:hover {
+    box-shadow: 0 6px 20px rgba(52, 152, 219, 0.1);
+    transform: translateY(-5px);
+}
+
+/* 时间线优化 */
+.timeline {
+    position: relative;
+    padding-top: 40px;
+}
+
+
+.timeline-date {
+    display: inline-block;
+    background: rgba(52, 152, 219, 0.1);
+    color: var(--secondary-color);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    margin-bottom: 0.8rem;
+}
+
+/* 项目亮点样式 */
+.project-highlights {
+    background: rgba(52, 152, 219, 0.03);
+    padding: 3rem 2rem;
+    margin: 2rem 0;
+    border-radius: 12px;
+    border: 1px solid rgba(52, 152, 219, 0.1);
+}
+
+.highlight-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.highlight-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.highlight-card:hover {
+    transform: translateY(-8px);
+}
+
+.highlight-card::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--secondary-color);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.highlight-card:hover::after {
+    transform: scaleX(1);
+}
+
+.highlight-icon {
+    width: 60px;
+    height: 60px;
+    background: rgba(52, 152, 219, 0.1);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.highlight-icon i {
+    font-size: 1.8rem;
+    color: var(--secondary-color);
+}
+
+.highlight-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.highlight-list li {
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
+}
+
+.highlight-list li::before {
+    content: "▹";
+    position: absolute;
+    left: 0;
+    color: var(--secondary-color);
+    font-weight: 700;
+}
+
+/* 项目经验容器 */
+.project-experience {
+    margin: 3rem 0;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+}
+
+/* 项目卡片 */
+.project-card {
+    border: 1px solid rgba(52, 152, 219, 0.1);
+    border-radius: 10px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(52, 152, 219, 0.1);
+}
+
+/* 项目标题区 */
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid rgba(52, 152, 219, 0.1);
+}
+
+.project-header h3 {
+    color: var(--primary-color);
+    font-size: 1.4rem;
+    margin: 0;
+}
+
+/* 技术标签容器 */
+.project-tech {
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+}
+
+/* 项目内容布局 */
+.project-content {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 2rem;
+}
+
+/* 项目描述样式 */
+.project-desc h4 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.feature-list {
+    list-style: none;
+    padding-left: 1.5rem;
+}
+
+.feature-list li {
+    position: relative;
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
+}
+
+.feature-list li::before {
+    content: "•";
+    color: var(--secondary-color);
+    position: absolute;
+    left: -1.2rem;
+    font-weight: bold;
+}
+
+/* 技术实现列表 */
+.achievement-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.achievement-list li {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background: rgba(52, 152, 219, 0.03);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.achievement-list i {
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+    min-width: 24px;
+    text-align: center;
+}
+
+/* Education Section Styles */
+.education-section {
+    background: rgba(255, 255, 255, 0.98);
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+    margin: 2rem 0;
+}
+
+.timeline-item {
+    background: #fff;
+    padding: 1.8rem;
+    border-radius: 10px;
+    border-left: 4px solid var(--secondary-color);
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.timeline-item:hover {
+    transform: translateX(10px);
+}
+
+.education-details {
+    margin-top: 1.2rem;
+}
+
+.degree {
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+}
+
+.academic-performance {
+    display: flex;
+    gap: 1.5rem;
+    margin: 1rem 0;
+}
+
+.gpa,
+.honors {
+    padding: 0.4rem 0.8rem;
+    background: rgba(52, 152, 219, 0.08);
+    border-radius: 6px;
+    font-size: 0.9rem;
+}
+
+/* 认证部分样式 */
+.cert-section {
+    padding: 2.5rem 0;
+    margin: 2rem 0;
+}
+
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.cert-item {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(52, 152, 219, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.cert-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(52, 152, 219, 0.1);
+}
+
+.cert-item::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg,
+            transparent 25%,
+            rgba(52, 152, 219, 0.03) 50%,
+            transparent 75%);
+    transform: rotate(45deg);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.cert-item:hover::before {
+    opacity: 1;
+}
+
+.cert-item i {
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.cert-item h4 {
+    color: var(--primary-color);
+    margin-bottom: 0.8rem;
+    font-size: 1.2rem;
+}
+
+.cert-item p {
+    color: #6c757d;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .cert-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cert-item {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .cert-section {
+        padding: 1.5rem 0;
+    }
+
+    .cert-item i {
+        font-size: 2rem;
+    }
+}

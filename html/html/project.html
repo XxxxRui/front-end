@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Coding Practices</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Best Coding Practices</h1>
+    </header>
+    
+    <main>
+        <section id="best-practices">
+            <h2>Checklist</h2>
+            <ul>
+                <li>
+                    <input type="checkbox" id="semantic-html">
+                    <label for="semantic-html">Use semantic HTML for better accessibility and SEO</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="responsive-design">
+                    <label for="responsive-design">Ensure responsive design for various screen sizes</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="minified-files">
+                    <label for="minified-files">Minify CSS and JavaScript for performance optimization</label>
+                </li>
+            </ul>
+        </section>
+        
+        <section id="summary">
+            <h2>Summary</h2>
+            <p>You have met <span id="checked-count">0</span> out of 3 best practices.</p>
+            <div id="reward"></div>
+        </section>
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>
