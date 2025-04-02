@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rui Xin - Professional Portfolio</title>
+
     <!-- Font Awesome for icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <!-- Bootstrap CSS -->
@@ -280,18 +281,39 @@
         </section>
     </div>
     <!-- Schema.org Structured Data -->
+    <!-- Schema.org Structured Data -->
     <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Rui Xin",
+      "jobTitle": "Back-end Developer",
+      "url": "https://yourportfolio.com",
+      "image": "image/logo.jpeg",
+      "email": "placeholder@email.com",
+      "telephone": "+1234567890",
+      "sameAs": [
+        "https://linkedin.com/in/xxxxxx",
+        "https://github.com/xxxxxx"
+      ],
+      "alumniOf": [
         {
-          "@context": "https://schema.org",
-          "@type": "Person",
-          "name": "Rui Xin",
-          "jobTitle": "Back-end Developer",
-          "url": "https://yourportfolio.com",
-          "sameAs": [
-            "https://linkedin.com/in/xxxxxx",
-            "https://github.com/xxxxxx"
-          ]
+          "@type": "CollegeOrUniversity",
+          "name": "Shanghai University of Electric Power",
+          "sameAs": "https://www.shiep.edu.cn/"
+        },
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "University of Western Australia",
+          "sameAs": "https://www.uwa.edu.au/"
         }
+      ],
+      "knowsAbout": ["Java", "SpringBoot", "Microservices", "Redis", "Elasticsearch"],
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Current Employer"
+      }
+    }
     </script>
 
     <!-- JavaScript Files -->

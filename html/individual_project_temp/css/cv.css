@@ -1,10 +1,43 @@
 /* Root CSS variables for consistent color theming */
+/* Root CSS variables for consistent color theming */
 :root {
+    /* 颜色变量 */
     --primary-color: #2c3e50;
     --secondary-color: #3498db;
     --background-color: #ecf0f1;
+    --text-color: #333333;
+    --light-text: #6c757d;
+    --border-color: rgba(52, 152, 219, 0.1);
+    --card-bg: #ffffff;
+    --hover-bg: #f8f9fa;
+    
+    /* 间距变量 */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+    
+    /* 字体大小变量 */
+    --font-xs: 0.8rem;
+    --font-sm: 0.9rem;
+    --font-md: 1rem;
+    --font-lg: 1.2rem;
+    --font-xl: 1.5rem;
+    --font-xxl: 2rem;
+    
+    /* 边框变量 */
+    --border-radius-sm: 4px;
+    --border-radius-md: 8px;
+    --border-radius-lg: 12px;
+    --border-width: 1px;
+    --border-width-thick: 3px;
+    
+    /* 动画变量 */
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+    --transition-slow: 0.5s ease;
 }
-
 /* Reset all default browser styling */
 * {
     margin: 0;
